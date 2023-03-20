@@ -1,0 +1,40 @@
+<section class="notifications mt-5 mb-5">
+    <div class="container bg-white">
+        <div class="row justify-content-center ">
+            <div *ngIf="offersList.length==0">
+                <!-- Sorry No Offers Here -->
+               
+                <div class="img ">
+                    <h2 class="text-center">There is no offers untill now !!</h2>
+                    <div class="d-flex justify-content-center  ">
+                    <img src="../assets/images/no offers3.png" alt="" class="w-50">
+                </div></div>
+            </div>
+            <div *ngIf="offersList.length!=0">
+
+                <div class="col-8 " *ngFor="let offers of offersList ;">
+                    <div class="instructor-responce-card p-3 let offers of offers.offers">
+                        <div class="_post  border border-1  p-3 mt-3 bg-white rounded">
+                            <div class="img_post d-flex justify-content-between">
+                                <div><img
+                                        src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                                        alt="" srcset="">
+                                    <span>{{offers.instructor_name}}</span>
+                                </div>
+                                <p class="text-black-50">{{offers.created_at}}</p>
+
+                            </div>
+                            <hr>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
